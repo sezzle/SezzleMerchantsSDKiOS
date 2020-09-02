@@ -31,7 +31,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '10.0'
 
-  s.source_files = 'SezzleMobileSDK/Classes/**/*'
+  s.source_files = 'SezzleMobileSDK/*'
   
   s.dependency 'SwiftyJSON', '~> 5.0'
   
