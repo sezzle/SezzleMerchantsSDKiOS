@@ -1,0 +1,29 @@
+{
+  "name": "SezzleMobileSDK",
+  "version": "0.1.0",
+  "summary": "A mobile SDK for Sezzle merchants",
+  "swift_versions": "5.0",
+  "description": "The Sezzle Mobile SDK is designed to give our merchants the ability to create Sezzle checkouts from their own apps. The SDK will open a webview given the SezzleSession that is passed",
+  "homepage": "https://github.com/Charlie Sarano/SezzleMobileSDK",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Charlie Sarano": "charlie.enriquez-sarano@sezzle.com"
+  },
+  "source": {
+    "git": "https://github.com/Charlie Sarano/SezzleMobileSDK.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source_files": "SezzleMobileSDK/Classes/**/*",
+  "dependencies": {
+    "SwiftyJSON": [
+      "~> 5.0"
+    ]
+  },
+  "swift_version": "5.0"
+}

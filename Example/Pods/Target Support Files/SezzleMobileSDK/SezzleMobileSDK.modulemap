@@ -1,0 +1,6 @@
+framework module SezzleMobileSDK {
+  umbrella header "SezzleMobileSDK-umbrella.h"
+
+  export *
+  module * { export * }
+}

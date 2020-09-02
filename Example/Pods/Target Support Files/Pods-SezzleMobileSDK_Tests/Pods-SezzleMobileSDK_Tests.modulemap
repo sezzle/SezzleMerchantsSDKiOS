@@ -1,0 +1,6 @@
+framework module Pods_SezzleMobileSDK_Tests {
+  umbrella header "Pods-SezzleMobileSDK_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

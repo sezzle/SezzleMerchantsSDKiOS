@@ -1,0 +1,12 @@
+use_frameworks!
+
+target 'SezzleMobileSDK_Example' do
+  pod 'SwiftyJSON', '~> 5.0'
+  pod 'SezzleMobileSDK', :path => '../'
+
+  target 'SezzleMobileSDK_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

@@ -1,0 +1,24 @@
+PODS:
+  - SezzleMobileSDK (0.1.0):
+    - SwiftyJSON (~> 5.0)
+  - SwiftyJSON (5.0.0)
+
+DEPENDENCIES:
+  - SezzleMobileSDK (from `../`)
+  - SwiftyJSON (~> 5.0)
+
+SPEC REPOS:
+  trunk:
+    - SwiftyJSON
+
+EXTERNAL SOURCES:
+  SezzleMobileSDK:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SezzleMobileSDK: 7985ae18101b080aac8de6d9439a5d3b2b684c85
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+
+PODFILE CHECKSUM: 194597bae095b9f748410c4060abd4ba4b06ca5f
+
+COCOAPODS: 1.9.1
