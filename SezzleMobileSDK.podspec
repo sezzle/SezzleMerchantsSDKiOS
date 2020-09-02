@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
   The Sezzle Mobile SDK is designed to give our merchants the ability to create Sezzle checkouts from their own apps. The SDK will open a webview given the SezzleSession that is passed
                        DESC
 
-  s.homepage         = 'https://github.com/Charlie Sarano/SezzleMobileSDK'
+  s.homepage         = 'https://github.com/sezzle/SezzleMerchantsSDKiOS'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Charlie Sarano' => 'charlie.enriquez-sarano@sezzle.com' }
