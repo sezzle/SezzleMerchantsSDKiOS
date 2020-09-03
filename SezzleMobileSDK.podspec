@@ -31,13 +31,15 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '10.0'
 
-  s.source_files = 'SezzleMobileSDK/**/*'
+  s.source_files = 'SezzleMobileSDK/**/*.{swift,h,m}'
+
+  # s.resources = {'SezzleMobileSDK/
   
   s.dependency 'SwiftyJSON', '~> 5.0'
   
-  # s.resource_bundles = {
-  #   'SezzleMobileSDK' => ['SezzleMobileSDK/Assets/*.png']
-  # }
+  s.resource_bundles = {
+    'SezzleMobileSDK' => ['SezzleMobileSDK/Assets/*.png']
+  }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
