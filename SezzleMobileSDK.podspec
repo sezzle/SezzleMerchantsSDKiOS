@@ -33,10 +33,15 @@ Pod::Spec.new do |s|
 
   s.source_files = 'SezzleMobileSDK/**/*.{swift,h,m}'
 
-  # s.resources = {'SezzleMobileSDK/
+ s.resources = [
+    'SezzleMobileSDK/Assets/Logo/*.png',
+    'SezzleMobileSDK/Assets/Fonts/*.ttf'
+  ]
   
   s.dependency 'SwiftyJSON', '~> 5.0'
   
+
+
   s.resource_bundles = {
     'SezzleMobileSDK' => ['SezzleMobileSDK/Assets/*.png']
   }
