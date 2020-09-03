@@ -57,10 +57,10 @@ public class SezzleBaseViewController: UIViewController, WKNavigationDelegate, W
 //    }
     
     func loadErrorPage(error: Error) {
-        //[[AffirmLogger sharedInstance] trackEvent:@"Web load failed" parameters:@{@"error_description": error.localizedDescription}];
-        var errorDescription = error.localizedDescription.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)
+        // in the future we log errors with parameters:@{@"error_description": error.localizedDescription}];
+        //var errorDescription = error.localizedDescription.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)
         //var url = SezzleConfiguration.sharedInstance.domain
-        //NSString *url = [NSString stringWithFormat:@"https://www.%@/u/#/error?main=Error&sub=%@", [AffirmConfiguration sharedInstance].domain, errorDescription];
+        //NSString *url = [NSString stringWithFormat:@"https://www.%@/u/#/error?main=Error&sub=%@",
         //[self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]]];
     }
 }
