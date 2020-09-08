@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SezzleMobileSDK'
-  s.version          = '1.1.0'
+  s.version          = '1.2.0'
   s.summary          = 'A mobile SDK for Sezzle merchants'
   s.swift_version    = '5.0'
 
