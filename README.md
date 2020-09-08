@@ -28,7 +28,7 @@ The SezzleOrder object will accept two types of intent for the checkout, "CAPTUR
 
 Present this view controller with a delegate to show the customer the Sezzle Webview which will finalize their checkout. When a checkout is complete, whether successfully or not, a delegate function will be called to indicate the results of the attempted checkout. When the checkout is successful, use the token passed back to complete the order from your backend.
 
-## Checkout Delegate
+### Checkout Delegate
 
 The checkout viewController requires a delegate be passed to its initializer. There are four functions required in the delegate protocol:
 
