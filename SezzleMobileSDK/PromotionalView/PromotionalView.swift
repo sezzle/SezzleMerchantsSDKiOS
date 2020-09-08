@@ -16,16 +16,11 @@ import UIKit
     
     public init(frame: CGRect, viewController: UIViewController, amount: Float, language: Constants.Static.Languages, modalVersion: String = "2.0.0", font: UIFont = UIFont.systemFont(ofSize: 15), shadow: Bool = true, fontColor: UIColor = Constants.Static.SEZZLE_TEXT_COLOR) {
         super.init(frame: frame)
-        //xibSetup()
         
-        // how do we want to set up our promotional view?
-        // should it be text on top?
-        // so - [ text ]
-        //      [ logo ]
+        // this is how our promotional view will look
+        // [ text ]
+        // [ logo ]
         
-        // or -  [ text logo ] - my worry is that this view is too long for a lot of phones
-        
-        // lets do the first, and then present them
         self.viewController = viewController
         self.language = language
         self.modalVersion = modalVersion
@@ -93,13 +88,10 @@ import UIKit
         self.addSubview(label)
         
         self.autoresizesSubviews = true
-        
-        
     }
     
     @objc func sezzleTapped(gesture: UITapGestureRecognizer) {
         // create promotional view, and then present to the view controller that owns the view
-        print("we tapped the promotional view")
         let promotionalViewController = SezzlePromotionalViewController(language: language, version: self.modalVersion)
         viewController?.present(promotionalViewController, animated: true, completion: nil)
         
