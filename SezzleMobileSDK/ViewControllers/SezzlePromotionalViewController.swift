@@ -15,8 +15,8 @@ public class SezzlePromotionalViewController: SezzleBaseViewController {
     private var language: String
     private var version: String
     
-    public init(language: String, version: String) {
-        self.language = language
+    public init(language: Constants.Static.Languages, version: String) {
+        self.language = language.rawValue
         self.version = version
         super.init(nibName: nil, bundle: nil)
         self.webView?.backgroundColor = UIColor.clear

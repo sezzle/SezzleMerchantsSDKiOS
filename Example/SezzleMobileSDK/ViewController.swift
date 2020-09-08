@@ -10,13 +10,13 @@ import UIKit
 import SezzleMobileSDK
 
 class ViewController: UIViewController, SezzleCheckoutDelegate {
+    @IBOutlet weak var promotionalContiner: UIView!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
        
-        
         
     }
 
@@ -27,6 +27,9 @@ class ViewController: UIViewController, SezzleCheckoutDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        let promotionalView = PromotionalView(frame: CGRect(x: 0, y: 0, width: promotionalContiner.bounds.width, height: promotionalContiner.bounds.height), viewController: self, amount: 10.0, language: .French, shadow: true)
+        promotionalView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        promotionalContiner.addSubview(promotionalView)
         
     }
     
@@ -51,7 +54,7 @@ class ViewController: UIViewController, SezzleCheckoutDelegate {
     }
     
     @IBAction func showPromotionalContent(_ sender: Any) {
-        let promotionalVC = SezzlePromotionalViewController(language: "en", version: "2.0.0")
+        let promotionalVC = SezzlePromotionalViewController(language: .English, version: "2.0.0")
         self.present(promotionalVC, animated: true)
     }
     

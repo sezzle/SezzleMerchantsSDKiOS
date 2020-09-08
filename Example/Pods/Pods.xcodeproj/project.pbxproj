@@ -12,7 +12,6 @@
 		1DA44461E41F681D7BCFE7376A344A13 /* SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 593C23BE6F81900B7E5D14655827CBEC /* SwiftyJSON-dummy.m */; };
 		1F2CC3F824ECE9E500A1CCA7 /* SezzleConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CC3F724ECE9E500A1CCA7 /* SezzleConstants.swift */; };
 		1F2CC3FA24ED92FE00A1CCA7 /* SezzleReasonCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CC3F924ED92FE00A1CCA7 /* SezzleReasonCodes.swift */; };
-		1F5A238A24FF4BD600FB114E /* PromotionalView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F5A238924FF4BD600FB114E /* PromotionalView.xib */; };
 		1F5A238C24FF53AB00FB114E /* PromotionalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A238B24FF53AB00FB114E /* PromotionalView.swift */; };
 		1FA2825125001C0B00353315 /* SezzleConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA2825025001C0B00353315 /* SezzleConfiguration.swift */; };
 		1FC9A83F24F065AC00A511B0 /* Comfortaa-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1FC9A83A24F065AC00A511B0 /* Comfortaa-Light.ttf */; };
@@ -87,8 +86,7 @@
 		16EDD9C5D44198CDEE4220AFC77B0A13 /* SezzleMobileSDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SezzleMobileSDK-prefix.pch"; sourceTree = "<group>"; };
 		1F2CC3F724ECE9E500A1CCA7 /* SezzleConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SezzleConstants.swift; path = SezzleMobileSDK/Utils/SezzleConstants.swift; sourceTree = "<group>"; };
 		1F2CC3F924ED92FE00A1CCA7 /* SezzleReasonCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SezzleReasonCodes.swift; path = SezzleMobileSDK/Utils/SezzleReasonCodes.swift; sourceTree = "<group>"; };
-		1F5A238924FF4BD600FB114E /* PromotionalView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PromotionalView.xib; sourceTree = "<group>"; };
-		1F5A238B24FF53AB00FB114E /* PromotionalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionalView.swift; sourceTree = "<group>"; };
+		1F5A238B24FF53AB00FB114E /* PromotionalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PromotionalView.swift; path = ../SezzleMobileSDK/PromotionalView/PromotionalView.swift; sourceTree = "<group>"; };
 		1FA2825025001C0B00353315 /* SezzleConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SezzleConfiguration.swift; sourceTree = "<group>"; };
 		1FC9A83A24F065AC00A511B0 /* Comfortaa-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-Light.ttf"; sourceTree = "<group>"; };
 		1FC9A83B24F065AC00A511B0 /* Comfortaa-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -205,7 +203,6 @@
 		1F5A238824FF4B6A00FB114E /* PromotionalView */ = {
 			isa = PBXGroup;
 			children = (
-				1F5A238924FF4BD600FB114E /* PromotionalView.xib */,
 				1F5A238B24FF53AB00FB114E /* PromotionalView.swift */,
 			);
 			path = PromotionalView;
@@ -571,7 +568,6 @@
 				1FC9A84C24F34E9900A511B0 /* SezzlePaymentGraphic (2).png in Resources */,
 				1FC9A84124F065AC00A511B0 /* Comfortaa-Medium.ttf in Resources */,
 				1FC9A83F24F065AC00A511B0 /* Comfortaa-Light.ttf in Resources */,
-				1F5A238A24FF4BD600FB114E /* PromotionalView.xib in Resources */,
 				1FC9A84024F065AC00A511B0 /* Comfortaa-SemiBold.ttf in Resources */,
 				1FC9A84224F065AC00A511B0 /* Comfortaa-Regular.ttf in Resources */,
 				1FC9A84624F0692E00A511B0 /* sezzle-logo.png in Resources */,

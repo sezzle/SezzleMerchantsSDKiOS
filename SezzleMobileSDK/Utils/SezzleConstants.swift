@@ -32,14 +32,26 @@ public class Constants {
         static let CHECKOUT_ERROR = "checkout_error"
         static let RESULT_ERROR = -8575
         
+        public static let SEZZLE_TEXT_COLOR = UIColor(red: 57 / 255.0, green: 37 / 255.0, blue: 88 / 255.0, alpha: 1)
+        
         public enum Locations: String {
             case US = "US"
             case CAN = "CAN"
         }
         
+        public enum Languages: String {
+            case English = "en"
+            case French = "fr"
+        }
+        
         public enum Environments: String {
             case SANDBOX = "sandbox.sezzle.com"
             case PRODUCTION = "staging.gateway.sezzle.com"
+        }
+        
+        public enum PromotionalText: String {
+            case English = "or 4 interest-free payments of $%.2f with"
+            case French = "ou 4 versements de $%.2f sans intérêts avec"
         }
         
     }
