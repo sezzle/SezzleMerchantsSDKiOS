@@ -12,8 +12,9 @@ import UIKit
     //var view: UIView!
     var viewController: UIViewController?
     var language: Constants.Static.Languages = .English
+    var modalVersion: String = "2.0.0"
     
-    public init(frame: CGRect, viewController: UIViewController, amount: Float, language: Constants.Static.Languages, font: UIFont = UIFont.systemFont(ofSize: 15), shadow: Bool = true, fontColor: UIColor = Constants.Static.SEZZLE_TEXT_COLOR) {
+    public init(frame: CGRect, viewController: UIViewController, amount: Float, language: Constants.Static.Languages, modalVersion: String = "2.0.0", font: UIFont = UIFont.systemFont(ofSize: 15), shadow: Bool = true, fontColor: UIColor = Constants.Static.SEZZLE_TEXT_COLOR) {
         super.init(frame: frame)
         //xibSetup()
         
@@ -27,6 +28,7 @@ import UIKit
         // lets do the first, and then present them
         self.viewController = viewController
         self.language = language
+        self.modalVersion = modalVersion
         
         setupChildViews(font: font, fontColor: fontColor, amount: amount)
         if (shadow == true) {
@@ -98,7 +100,7 @@ import UIKit
     @objc func sezzleTapped(gesture: UITapGestureRecognizer) {
         // create promotional view, and then present to the view controller that owns the view
         print("we tapped the promotional view")
-        let promotionalViewController = SezzlePromotionalViewController(language: language, version: "2.0.0")
+        let promotionalViewController = SezzlePromotionalViewController(language: language, version: self.modalVersion)
         viewController?.present(promotionalViewController, animated: true, completion: nil)
         
     }
