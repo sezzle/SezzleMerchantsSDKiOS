@@ -28,6 +28,24 @@ The SezzleOrder object will accept two types of intent for the checkout, "CAPTUR
 
 Present this view controller with a delegate to show the customer the Sezzle Webview which will finalize their checkout. When a checkout is complete, whether successfully or not, a delegate function will be called to indicate the results of the attempted checkout. When the checkout is successful, use the token passed back to complete the order from your backend.
 
+## Checkout Delegate
+
+The checkout viewController requires a delegate be passed to its initializer. There are four functions required in the delegate protocol:
+
+```
+func completedCheckoutWithToken(token: String)
+    
+func checkoutCancelled()
+    
+func checkoutCancelledWithReason(reasonCode: String)
+    
+func checkoutFailedWithError(error: Error)
+```
+
+In both the AUTH and CAPTURE flow, the completedCheckout function will be called and return the token that was used for capture, and that will be used for capture.
+
+All other function refer to failed checkouts, with the first checkoutCancelled referring to a user closing out the SezzleCheckout before the process could be finished, and the latter two referring to issues with displaying the SezzleCheckout. A checkout will fail when the app cannot complete the URLSession task to get the url necessary for making the checkout, or be cancelled when the response to the task isn't in the 200 range. 
+
 ## Promotion
 
 To promote the use of Sezzle, and explain the core concept of Buy Now Pay Later, we provide the SezzlePromotionalViewController, which can be initialized with the version of the modal you would like to use, and the language you would like to use. Currently, two languages are available, English and French. For reference of what modal versions are available, please refer to the Sezzle Modal repository. The initliazation of the promotional view controller is as follows:
