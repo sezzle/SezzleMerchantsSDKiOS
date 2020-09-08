@@ -33,6 +33,12 @@ Present this view controller with a delegate to show the customer the Sezzle Web
 To promote the use of Sezzle, and explain the core concept of Buy Now Pay Later, we provide the SezzlePromotionalViewController, which can be initialized with the version of the modal you would like to use, and the language you would like to use. Currently, two languages are available, English and French. For reference of what modal versions are available, please refer to the Sezzle Modal repository. The initliazation of the promotional view controller is as follows:
 
 ```
-let promotionalVC = SezzlePromotionalViewController(language: "en", version: "2.0.0")
+let promotionalVC = SezzlePromotionalViewController(language: .English, version: "2.0.0")
 ```
+
+In addition to the SezzlePromotionalViewController, we also provide the PromotionalView, which can be initialized programmatically with the following code:
+```
+let promotionalView = PromotionalView(frame: CGRect(x: 0, y: 0, width: width, height: height), viewController: self, amount: 10.0, language: .English, shadow: true)
+```
+This view will initialize a PromotionalViewController and present it to the ViewController that was passed to the view when the view is pressed. Currently, as it is with the PromotionalViewController, the PromotionalView supports two languages, English and French. In addition to the parameters that are displayed above, the user can also set the font they wish to use to display the promotional messaging and the fontColor. By default, these will be set to the system default and Sezzle's default color for text respectively. The shadow parameter refers to a shadow placed around the view itself, as well as a corner radius that is applied to the view. If you wish to handle these yourself, pass a false value, and these additions will not be made. 
 
