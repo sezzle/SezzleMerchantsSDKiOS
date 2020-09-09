@@ -5,7 +5,7 @@ A Sezzle SDK for ios apps
 
 Add the SDK to your project via cocoapods:
 ```
-pod 'SezzleMobileSDK', '~> 1.0'
+pod 'SezzleMobileSDK', '~> 1.2'
 ```
 
 ## Usage
