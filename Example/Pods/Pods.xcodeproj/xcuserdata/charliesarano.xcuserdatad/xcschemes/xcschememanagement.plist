@@ -14,10 +14,10 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>SezzleMobileSDK.xcscheme</key>
+		<key>SezzleMobileSDK.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>isShown</key>
-			<false/>
+			<true/>
 		</dict>
 		<key>SwiftyJSON.xcscheme</key>
 		<dict>

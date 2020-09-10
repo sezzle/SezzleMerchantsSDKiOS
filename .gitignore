@@ -1,3 +1,4 @@
 #ignoring logs and DS_Store file
 *.log
 *.DS_Store
+/Carthage
