@@ -3,10 +3,15 @@ A Sezzle SDK for ios apps
 
 ## Installation
 
-Add the SDK to your project via cocoapods:
+Add the SDK to your project via [Cocoapods](https://cocoapods.org/):
 ```
 pod 'SezzleMobileSDK', '~> 1.2'
 ```
+Add the SDK to your project via [Carthage](https://github.com/Carthage/Carthage):
+```
+github "sezzle/SezzleMerchantsSDKiOS" ~> 1.2
+```
+Or drag the source files under the SezzleMobileSDK into your project.
 
 ## Usage
 
@@ -48,7 +53,7 @@ All other function refer to failed checkouts, with the first checkoutCancelled r
 
 ## Promotion
 
-To promote the use of Sezzle, and explain the core concept of Buy Now Pay Later, we provide the SezzlePromotionalViewController, which can be initialized with the version of the modal you would like to use, and the language you would like to use. Currently, two languages are available, English and French. For reference of what modal versions are available, please refer to the Sezzle Modal repository. The initliazation of the promotional view controller is as follows:
+To promote the use of Sezzle, and explain the core concept of Buy Now Pay Later, we provide the SezzlePromotionalViewController, which can be initialized with the version of the modal you would like to use, and the language you would like to use. Currently, two languages are available, English and French. For reference of what modal versions are available, please refer to the [Sezzle Modal repository](https://github.com/sezzle/sezzle-js). The initliazation of the promotional view controller is as follows:
 
 ```
 let promotionalVC = SezzlePromotionalViewController(language: .English, version: "2.0.0")
