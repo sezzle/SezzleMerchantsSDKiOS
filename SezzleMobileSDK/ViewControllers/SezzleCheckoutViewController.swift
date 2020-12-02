@@ -73,7 +73,6 @@ public class SezzleCheckoutViewController: SezzleBaseViewController {
     }
     
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
-        print("suck it trebek again")
         checkoutDelegate?.checkoutCancelledWithReason(reasonCode: ErrorHandler.ReasonCodes.webViewError.rawValue)
     }
 }

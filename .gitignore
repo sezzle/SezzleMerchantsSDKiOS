@@ -1,4 +1,6 @@
 #ignoring logs and DS_Store file
+*.xcuserstate
 *.log
 *.DS_Store
 /Carthage
+xcuserdata/

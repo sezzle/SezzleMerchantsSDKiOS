@@ -12,7 +12,6 @@ import SwiftyJSON
 extension SezzleCheckoutViewController: URLSessionDataDelegate {
     
     func getSezzleURL(sezzleSession: SezzleSession) {
-        print("started the getSezzleURL function")
         let apiProtocol = Constants.Static.HTTPS_PROTOCOL
         let domain = self.sezzleConfiguration.environment
         let urlPath = apiProtocol + domain + Constants.Static.CHECKOUT_PATH
@@ -78,7 +77,6 @@ extension SezzleCheckoutViewController: URLSessionDataDelegate {
                     let checkoutURL = json["order"]["checkout_url"].string
                     self.displayURL(checkoutURLString: checkoutURL!, checkoutUUID: orderUUID!)
                 }
-                print("and now we started the getURLTask")
                 getURLTask.resume()
             }
         }
