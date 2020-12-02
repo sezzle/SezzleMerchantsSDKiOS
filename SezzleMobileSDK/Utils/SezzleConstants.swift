@@ -46,7 +46,7 @@ public class Constants {
         
         public enum Environments: String {
             case SANDBOX = "sandbox.sezzle.com"
-            case PRODUCTION = "staging.gateway.sezzle.com"
+            case PRODUCTION = "gateway.sezzle.com"
         }
         
         public enum PromotionalText: String {
