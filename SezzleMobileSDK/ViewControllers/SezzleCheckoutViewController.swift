@@ -52,8 +52,6 @@ public class SezzleCheckoutViewController: SezzleBaseViewController {
     
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
         let newURLString = navigationAction.request.url?.absoluteString
-        print("Here is the new url we are attempting:")
-        print(newURLString)
         
         if (newURLString == cancelURL.href) {
             print("We cancelled the order!")
