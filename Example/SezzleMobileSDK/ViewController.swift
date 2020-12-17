@@ -38,14 +38,19 @@ class ViewController: UIViewController, SezzleCheckoutDelegate {
     }
     
     @IBAction func startCheckout(_ sender: Any) {
-        let configuration = SezzleConfiguration(publicKey: "qxorvmr7zbww7yw8vvhlxi8s3uko18q7", location: .US, environment: .PRODUCTION)
+        let configuration = SezzleConfiguration(publicKey: "sz_pub_t5iAKWJEFv9ZBV1F4fc7e6Hs7nPssL32", location: .US, environment: .SANDBOX)
         
         let address = SezzleAddress(name: "Charlie Sarano", streetAddress: "1834 Ulysses St NE", city: "Minneapolis", state: "MN", postalCode: "55418", countryCode: "US", phoneNumber: "5072617662")
-        let customer = SezzleCustomer(tokenize: true, email: "charlie.enriquez-sarano@sezzle.com", firstName: "Charlie", lastName: "Sarano", phone: "5072617662", dob: "1995-02-01", billingAddress: address, shippingAddress: address)
+        let customer = SezzleCustomer(tokenize: true, email: "charlie.enriquez-sarano@sezzle.com", firstName: "Charlie", lastName: "Sarano", phone: "5072617662", dob: "", billingAddress: address, shippingAddress: address)
         
-        let price = SezzlePrice(amountInCents: 1000, currency: "USD")
-        let item = SezzleItem(name: "widget", sku: "sku123456", quantity: 1, price: price)
-        let order = SezzleOrder(intent: "CAPTURE", referenceId: "ord_charlie_1", description: "sezzle-store - #12749253509255", orderAmount: price, items: [item], discounts: [], shippingAmount: price, taxAmount: price, checkoutExpiration: "2021-04-23T16:13:44Z")
+
+        
+        let price = SezzlePrice(amountInCents: 2711, currency: "USD")
+        let itemPrice = SezzlePrice(amountInCents: 2499, currency: "USD")
+        let shippingPrice = SezzlePrice(amountInCents: 0, currency: "USD")
+        let taxAmount = SezzlePrice(amountInCents: 212, currency: "USD")
+        let item = SezzleItem(name: "Supernova Pro", sku: "KB188LBWC", quantity: 1, price: itemPrice)
+        let order = SezzleOrder(intent: "CAPTURE", referenceId: "O5240000787", description: "Touch of Modern Order", orderAmount: price, items: [item], discounts: [], shippingAmount: shippingPrice, taxAmount: taxAmount, checkoutExpiration: "2021-04-23T16:13:44Z")
          
         
         let checkoutVC = SezzleCheckoutViewController(customer: customer, order: order, delegate: self, configuration: configuration)

@@ -9,9 +9,6 @@ import Foundation
 
 public class Constants {
     public struct Static {
-        static let SANDBOX_URL = "sandbox.sezzle.com"
-        static let PRODUCTION_URL = "staging.gateway.sezzle.com"
-
         static let CHECKOUT_PATH = "/v2/session"
 
         static let SEZZLE_CHECKOUT_CONFIRMATION_URL = "sezzle://checkout/confirmed"
@@ -45,7 +42,7 @@ public class Constants {
         }
         
         public enum Environments: String {
-            case SANDBOX = "sandbox.sezzle.com"
+            case SANDBOX = "sandbox.gateway.sezzle.com"
             case PRODUCTION = "gateway.sezzle.com"
         }
         

@@ -52,6 +52,7 @@ public class SezzleCheckoutViewController: SezzleBaseViewController {
     
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
         let newURLString = navigationAction.request.url?.absoluteString
+        navigtaionAction
         
         if (newURLString == cancelURL.href) {
             print("We cancelled the order!")
@@ -74,5 +75,7 @@ public class SezzleCheckoutViewController: SezzleBaseViewController {
     
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
         checkoutDelegate?.checkoutCancelledWithReason(reasonCode: ErrorHandler.ReasonCodes.webViewError.rawValue)
+        self.dismiss(animated: true, completion: nil)
+        return
     }
 }

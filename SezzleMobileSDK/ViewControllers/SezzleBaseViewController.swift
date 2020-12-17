@@ -43,6 +43,11 @@ public class SezzleBaseViewController: UIViewController, WKNavigationDelegate, W
         super.init(coder: coder);
     }
     
+    deinit {
+        self.webView?.removeFromSuperview()
+        self.webView = nil
+    }
+    
 //    public override class func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
 //        if (keyPath == "estimatedProgress") {
 //            if (change?[NSKeyValueChangeKey(rawValue: "new")] as! Double > 1.0) {
@@ -55,6 +60,15 @@ public class SezzleBaseViewController: UIViewController, WKNavigationDelegate, W
 //            super.observeValue(forKeyPath: keyPath, of: object, change: change, context: context)
 //        }
 //    }
+    
+    public func webView(_ webView: WKWebView, decidePolicyFor navigationResponse: WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {
+        if let response = navigationResponse.response as? HTTPURLResponse {
+            print("here is the response for the webView url")
+            print(response)
+            //do something with headers
+        }
+        decisionHandler(.allow)
+    }
     
     func loadErrorPage(error: Error) {
         // in the future we log errors with parameters:@{@"error_description": error.localizedDescription}];
