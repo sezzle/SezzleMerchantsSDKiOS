@@ -33,10 +33,6 @@ class ViewController: UIViewController, SezzleCheckoutDelegate {
         
     }
     
-    func showPromotionalContent() {
-        
-    }
-    
     @IBAction func startCheckout(_ sender: Any) {
         let configuration = SezzleConfiguration(publicKey: "your public key", location: .US, environment: .SANDBOX)
         
