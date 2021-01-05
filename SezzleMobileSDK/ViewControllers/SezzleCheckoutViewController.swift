@@ -74,8 +74,8 @@ public class SezzleCheckoutViewController: SezzleBaseViewController {
     }
     
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+        print("The order couldn't be completed after the following webView error:")
         print(error)
-        print("we printed the error")
         checkoutDelegate?.checkoutCancelledWithReason(reasonCode: ErrorHandler.ReasonCodes.webViewError.rawValue)
         self.dismiss(animated: true, completion: nil)
         return
